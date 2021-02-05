@@ -12,7 +12,12 @@ for file in os.listdir("gallery"):
 
 class Message:
     def find(self, regex):
-        return str(self.data[1][self.data[0].index(regex)])
+        try:
+            z = self.data[0].index(regex)
+            x = self.data[1][z]
+            return str(x)
+        except IndexError:
+            return "!!!Contains Invalid Char!!!"
 
     def __init__(self, string_in):
         self.data = [[], []]
