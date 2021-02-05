@@ -126,7 +126,4 @@ def do():
     file.close()
 
 
-
-
-
 do()
